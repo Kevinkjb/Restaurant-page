@@ -1,0 +1,1098 @@
+
+
+:root{
+    --primary-color: #2572AB;
+    --text-color: #fff;
+    --background: #fef2e3;
+    --text-color-two: #86373a;
+    --text-font: 'Open Sans', sans-serif;
+    --heading-font: 'Berkshire Swash', cursive;
+   
+}
+
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    scroll-behavior: smooth;
+    
+}
+
+*, *::before, *::after{
+    box-sizing: inherit;
+}
+
+body{
+    width: 100%;
+    margin: 0 auto;
+    background-color: var(--background);
+    text-transform: uppercase;
+
+}
+
+
+
+
+/*----------------------------- MAIN NAV STYLING WITH GRID PROPERTIES-------------- */
+.nav-main{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    background-color: var(--background);
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem;
+    max-width: 2500px;
+    margin: 0 auto;
+}
+
+/* ------------------ -------------------------------------------*/
+
+/* This makes the hamburger disappear on the content */
+
+.ham{
+    display: none;
+}
+/* --------------------- */
+
+
+/* This grid column giving a specific location using display grid */
+
+.list-link{
+    grid-column: 3/5;
+    margin: 0 auto;
+}
+
+.logo{
+    grid-column: 1/3;
+    font-size: 1rem;
+}
+
+.logo h1{
+    font-family: 'Berkshire Swash', cursive;
+}
+
+.main-logo{
+    font-size: 2rem;
+    font-family: var(--heading-font);
+    color: var(--text-color-two);
+}
+
+/* ---------------- -------------*/
+
+
+
+/* This is the standard styling for the nav-item list for the padding and text transformation*/
+
+.menu, .nav-item, .menuLink{
+    display: flex;
+    padding: 0 2rem;
+}
+
+.nav-item{
+    list-style-type: none;
+    text-transform: uppercase;
+}
+.menuLink{
+    text-decoration: none;
+    color: var(--text-color-two);
+    font-family: 'Open Sans', sans-serif;
+
+
+}
+
+.nav-item{
+    display: inline-block;
+    transition: 300ms;
+    border-bottom: 1px solid transparent;
+}
+
+
+
+.nav-item::after {
+    content: '';
+    width: 0px;
+    height: 1px;
+    display: block;
+    background: var(--text-color-two);
+    transition: 400ms;
+    margin-top: 10px;
+
+  }
+  
+  .nav-item:hover::after {
+    width: 100%;
+  }
+
+a:focus,
+a:active,
+a:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+.fas{
+    color: var(--text-color-two);
+}
+
+/* ----------------------------- --------------------------------------*/
+
+/*----------------------------------TOP-CONTAINER TITLE CONTENT STYLING ----------------------*/
+
+.top-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+.top-container{
+    width: 100%;
+    margin: 10rem auto;
+}
+
+.title-heading{
+    grid-column: 1/2;
+    width: 80%;
+    margin: 0 auto;
+    padding: 2rem;
+}
+.hero-main{
+    width: 80%;
+    margin: 0 auto;
+    font-size: 5vmax;
+    padding: 3rem;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    font-family: var(--heading-font);
+}
+.hero-content{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    /* padding: 5rem; */
+    margin: 0 auto;
+    width: 80%;
+}
+
+.hero h2{
+    width: 80%;
+    padding: 2rem;
+    margin: 0 auto;
+    font-family: var(--text-font);
+}
+
+.hero{
+    margin-bottom: 2rem;
+}
+
+.info{
+    width: 80%;
+    max-width: 80%;
+    padding: 2rem;
+    margin: 0 auto;
+}
+
+.info p {
+    color: var(--text-color-two);
+}
+
+/* ------------------------- */
+
+/* Reservation section styling */
+
+.reserve-section{
+    width: 80%;
+    margin: 10rem auto;
+    padding: 3rem;
+}
+.reserve{
+    display: flex;
+    justify-content: space-around;
+    width: 60%;
+    padding: 2rem;
+    margin: 0 auto;
+}
+
+h1, h2{
+    color: var(--text-color-two);
+}
+
+.btn-reserve{
+    text-transform: uppercase;
+    color: var(--text-color);
+    padding: .8rem 1.5rem;
+    border-radius: 1rem;
+    border: 2px solid var(--text-color-two);
+    background-color: var(--text-color-two);
+    font-family: var(--text-font);
+}
+
+.btn-reserve:hover{
+    background-color: var(--background);
+
+    transition: .2s ease-in;
+    color: var(--text-color-two);
+    padding: .8rem 1.5rem;
+}
+
+.reserve-heading{
+    padding: 1rem;
+    font-size: 2rem;
+    text-transform: uppercase;
+}
+
+.reserve-hr{
+    width: 50%;
+    margin: -2rem auto;
+    color: #86373a;
+}
+
+.main-hr{
+    width: 80%;
+    margin: 0 auto;
+}
+
+.mid{
+    display: flex;
+    align-items: center;
+}
+/* ------------------------------------- */
+
+
+/* Menu styling section */
+
+.menu-section{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+    margin: 0 auto;
+    padding: 3rem;
+    grid-gap: 2rem;
+}
+
+
+.menu-image{
+    grid-column: 1/3;
+    background-image: url("https://norecipes.com/wp-content/uploads/2012/05/chicken-karaage-002.jpg");
+    height: 60vh;
+    min-width: 30vh;
+    max-width: 100%;
+    background-color: #eee;
+    background-position: center;
+    background-size: cover;
+    border-radius: .9rem;
+    padding: 2rem;
+}
+
+.menu-section:first-child{
+    margin-left: auto;
+}
+
+.menu-content{
+    width: 30vw;
+    max-width: 100%;
+    margin: 0 auto;
+    grid-column: 3/5;
+    padding: 2rem 0;
+}
+
+/* .menu-btn{
+
+} */
+
+.menu-heading{
+    width: 80%;
+    padding: 2rem;
+    margin: 0 auto;
+}
+
+.menu-title{
+    padding: 2rem 0;
+    line-height: 1.5;
+}
+
+
+@media screen and (max-width: 1050px) {
+    .menu-section{
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 730px) {
+    .menu-section{
+        width: 80%;
+        margin: 0 auto;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-gap: 2rem 0;
+
+    }
+
+    .menu-content{
+        width: 80%;
+        grid-column: 1/3;
+        grid-row: 2;
+    }
+
+    .menu-image{
+        width: 50vh;
+        height: 40vh;
+        margin: 0 auto;
+        grid-column: 1/3;
+        grid-row: 1;
+    }
+    .menu-title{
+        margin: 0 auto;
+        text-align: center;
+    }
+    .btn-main-menu{
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 610px) {
+    .menu-section{
+        width: 80%;
+        margin: 0 auto;
+        padding: 0;
+    }
+    .menu-image{
+        width: 65vw;
+        /* padding: 0; */
+    }
+    .menu-title{
+        font-size: 1.3rem;
+    }
+
+}
+
+@media screen and(max-width: 450px) {
+    .menu-title{
+        font-size: 1rem;
+    }
+}
+
+/* ----------------------- */
+
+
+/* -----------------------MAIN ORDER STYLING ----------------------------------------------------*/
+
+.order-main{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    align-items: center;
+    justify-content: center;
+}
+
+.order-section{
+    grid-column: 1/3;
+    grid-row: 1;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000;
+    margin: 15rem auto;
+    height: 80vh;
+    width: 100%;
+    z-index: -1;
+}
+
+.order-section::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: .3;
+    background-image: url("https://media-cdn.greatbritishchefs.com/media/ox5jqiza/img60839.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    
+} 
+
+.order-content{
+    width: 80%;
+    grid-column: 1/3;
+    grid-row: 1;
+    margin: 0 auto;
+}
+.order-title{
+    margin: 0 auto;
+    color: var(--background) ;
+}
+
+.order-heading {
+    padding: 2rem;
+    color: var(--background);
+}
+
+.order-p{
+    width: 80%;
+    max-width: 80%;
+    margin: 0 auto;
+    padding: 4rem 0;
+    font-size: 1rem;
+}
+
+.order-info{
+    width: 80%;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.btn-order{
+    text-transform: uppercase;
+    color: var(--text-color-two);
+    padding: .8rem 1.5rem;
+    border-radius: 1rem;
+    background-color: var(--background);
+    font-family: var(--text-font);
+    border: 2px solid var(--background);
+}
+
+.btn-order:hover{
+    background-color: transparent;
+    transition: .2s ease-in;
+    color: var(--background);
+    padding: .8rem 1.4rem;
+}
+
+/* ----------------------------------ORDER RESPONSIVE LAYOUT---------------------------------------- */
+
+@media screen and(max-width: 700px) {
+    .order-title{
+        width: 80%;
+        margin: 0 auto;
+    }
+    .order-p{
+        width: 60%;
+        padding: 2rem;
+        margin: 0 auto;
+    }
+}
+
+/* @media screen and(max-width: 430px) {
+    .order-content{
+        width: 80%;
+        margin: 0 auto;
+        padding: 0;
+    }
+
+
+} */
+
+@media screen and(max-width: 380px) {
+    .order-content{
+        width: 80%;
+        margin: 0 auto;
+        padding: 0;
+    }
+
+    .order-title{
+        width: 40%;
+        padding: 0;
+        margin: 0 auto;
+    }
+
+}
+
+/* --------------------------- -----------------------------------------------------------------*/
+
+
+
+
+
+
+/* -----------------------------------FOOTER SECTION STYLING ------------------------*/
+.footer-section{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: var(--text-color-two);
+    color: var(--background);
+
+}
+.news-title{
+    color: var(--background);
+}
+
+.footer-links{
+    display: grid;
+    width: 90%;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    padding: 3rem;
+    border-bottom: 1px solid var(--background) ;
+    margin-bottom: 1rem;
+}
+
+.footer-hours{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-info:first-child{
+    margin-right: auto;
+}
+.footer-info:last-child{
+    margin-left: auto;
+    /* padding-right: 2rem; */
+}
+
+.footer-hours{
+    text-align: left;
+}
+.footer-info{
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    line-height: 1.5;
+    padding-bottom: 1rem;
+}
+
+.footer-info ul{
+    padding-left: 1rem;
+}
+
+.footer-two{
+    padding-bottom: 1rem;
+}
+
+.newsletter-info{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-right: 1px solid var(--background) ;
+    border-bottom: 1px solid var(--background) ;
+    margin-bottom: 1rem;
+    padding: 2rem;
+
+}
+
+.newsletter-content p{
+padding: 2rem 0;
+}
+
+.hours-list{
+    padding: 0;
+}
+
+.list-info-footer{
+    list-style-type: none;
+}
+
+
+.span-hours{
+    text-align: left;
+}
+
+.days-info{
+    display: flex;
+    justify-content: space-between;
+}
+
+.links-title, .hours-title{
+    color: var(--background);
+    padding: 1rem 0;
+    text-align: center;
+}
+
+
+.hours-title{
+    padding-bottom: 3rem;
+}
+
+
+.btn-subscribe{
+    text-transform: uppercase;
+    color: var(--text-color-two);
+    padding: .8rem 1.5rem;
+    border-radius: 1rem;
+    border: 2px solid var(--background);
+    background-color: var(--background);
+    font-family: var(--text-font);
+
+}
+
+.btn-subscribe:hover{
+    background-color: var(--text-color-two);
+
+    transition: .2s ease-in;
+    color: var(--background);
+    padding: .8rem 1.5rem;
+}
+
+.email-subscribe-input{
+    padding: .8rem 4rem;
+    border-radius: 15px;
+    color: var(--text-color-two);
+    margin-right: 2rem;
+    margin-bottom: 1rem;
+    border: none;
+}
+
+.email-subscribe-input:focus,
+.email-subscribe-input:active,
+.email-subscribe-input:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+/* This is the responsive layout for the footer section */
+
+@media screen and (max-width: 1150px) {
+    .footer-section{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+
+    .newsletter-info{
+        grid-column: 1/3;
+        margin-bottom: 0 ;
+        border-right: none;
+    }
+
+    .footer-links{
+        width: 100%;
+        grid-column: 1/3;
+        grid-row: 2;
+        padding: 0;
+        margin: 0 auto 1rem auto; 
+    }
+
+    .footer-hours{
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .days-info{
+        width: 80%;
+        padding: 1rem;
+    }
+
+    .hours-info{
+        padding: 1rem;
+    }
+    .footer-one{
+        border-right: 1px solid var(--background) ;
+    }
+}
+
+@media screen and (max-width:650px) {
+    .footer-links{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(2, 1fr);
+        align-items: center;
+    }
+
+    .footer-one{
+        grid-column: 1/3;
+        grid-row: 2;
+        margin: 0 auto;
+        border-right: none;
+    }
+
+    .footer-two{
+        grid-column: 1/3;
+        grid-row: 1;
+        border-top: 1px solid var(--background) ;
+        border-right: none;        
+        border-bottom: 1px solid var(--background) ;
+    }
+    .footer-hours{
+        margin-right: auto;
+    }
+
+    .newsletter-info{
+        border-right: none ;
+        border-bottom: none ;
+    }
+}
+
+@media  screen and (max-width:490px) {
+    .btn-subscribe{
+        margin-top: 1.5rem;
+    }
+    .hours-title, .links-title{
+        padding: 1rem 0 1rem 0;
+    }
+}
+
+
+/* ------------------------------------ ---------------------------------------------------------*/
+
+
+
+
+
+/*--------------------------------------- FOOTER COPYRIGHTS -----------------*/
+.footer-copyrights{
+    background-color: var(--text-color-two);
+    text-align: center;
+    
+}
+
+.copyrights-info p{
+    font-size: .7rem;
+
+    padding: 1rem;
+    
+}
+.copyrights-info a{
+    text-decoration: none;
+    color: var(--background);
+}
+
+
+/* --------------------- ---------------------------------------------------------------*/
+
+
+
+/* Image styling where the background changes */
+.top-image-container {
+    grid-column: 2/3;
+    height: 60vh;
+    width: 80vh;
+    max-width: 100%;
+    margin: 1rem auto;
+    background-color: #eee;
+    padding: 3rem;
+    background-position: center;
+    background-size: cover;
+    border-radius: .9rem;
+    box-shadow: .1rem .1rem .2rem var(--text-color-two);
+    animation: image 10s ease-in infinite;
+  }
+
+
+
+  @keyframes image {
+    0% {
+      background-image: url('https://cdn.britannica.com/52/128652-050-14AD19CA/Maki-zushi.jpg');
+    }
+    
+    50%{
+      background-image: url("https://eggwansfoododyssey.com/wp-content/uploads/2017/03/ramen-3.jpg")
+    }
+    100% {
+      background-image: url('https://img.taste.com.au/jbdQff7C/taste/2016/11/katsudon-bowl-92023-2.jpeg');
+    }
+  }
+
+/* ----------------------------- */
+
+
+
+
+
+
+/* -------------Responsive layout below 1200px------------------------ */
+@media(max-width: 1320px){
+
+    body{
+        margin: 0 auto;
+    }
+
+    .link-list ul{
+        display: flex;
+        justify-content: center;
+    }
+
+    /* Top-container */
+
+    .top-container{
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto;
+        width: 80%;
+    }
+
+    .top-image-container{
+        width: 80%;
+        height: 50vh;
+    }
+
+    /* --------------------- */
+    
+/* ---------------Hamburger Styling Properties---------------------- */
+    .ham{
+        position: fixed;
+        z-index: 150;
+        top: auto;
+        right: 1rem;
+        padding: 1rem;
+        border:  solid 1px var(--text-color-two);
+        background: var(--text-color);
+        cursor: pointer;
+        display: block;
+        margin: 0 auto
+    }
+    .xIcon{
+        padding: .02rem .06rem;
+    }
+
+    .menu{
+        display: flex;
+        z-index: 100;
+        flex-direction: column;
+        align-items: center;
+        position: fixed;
+        margin: 0 auto;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(-45deg, var(--text-color), var(--text-color-two), var(--background));
+        background-size: 400% 400%;
+        animation: gradient 15s ease infinite;
+        color: white;
+        transform: translateY(-100%);
+        transition: .8s;
+      }
+
+      .showMenu{
+        transform: translateY(0);
+      }
+
+      /* ----------------------------------------- */
+      
+  
+      /* Gives the styling on the nav-list item */
+
+      .menuLink{
+        text-decoration: none;
+        color: var(--text-color);
+        font-size: 2rem;
+        text-transform: uppercase;
+      }
+
+
+      /* ---------------------------------------- */
+
+
+    /*This adjust the padding inside of the list   */
+
+      .nav-item, .menuLink{
+        padding: 2rem 0;
+        margin: 0 auto;
+      }
+
+      /* ------------------------- */
+
+
+      /* Gives underline when hover over */
+      .nav-item::after {
+        content: '';
+        width: 0px;
+        height: 1px;
+        display: block;
+        background: #fff;
+        transition: 400ms;
+    
+      }
+
+      /* ------------------------------------- */
+
+      /* This remove the toggle border that shows when click */
+      .ham:focus,
+      .ham:active,
+      .ham:focus {
+          outline: none;
+          box-shadow: none;
+      }
+
+
+      .reserve-hr{
+        width: 100%;
+    }
+    .reserve{
+        justify-content: space-between;
+        width: 80%;
+    }
+
+    }
+
+        /* -------------------------------------------- */
+
+
+        /* Mobile Device Screen */
+        @media screen and (max-width: 700px) {
+            .top-image-container{
+                width: 47vh;
+                height: 40vh;
+            }
+            .top-container{
+                width: 100%;
+                margin: 0 auto;
+            }
+
+            .reserve-hr{
+                width: 100%;
+            }
+
+            .main-hr{
+                width: 90%;
+            }
+
+            .reserve{
+                /* align-items: center; */
+                margin: 0 auto;
+                padding: 1rem;
+                width: 90%;
+                margin-bottom: 1rem;
+            }
+            .reserve-section{
+                width: 80%;
+                margin: 10rem auto;
+            }
+
+            .menu-section{
+                width: 80%;
+                margin: 0 auto;
+                padding: 0;
+            }
+        }
+
+
+
+        @media screen and (max-width: 510px) {
+            .logo h1{
+                font-size: 2rem;
+            }
+            .top-image-container{
+                width: 40vh;
+                height: 35vh;
+            }
+
+            .top-container{
+                width: 100%;
+                margin: 0 auto;
+            }
+
+            .hero{
+                font-size: 1.8rem;
+                text-align: left;
+            }
+
+            .reserve-section{
+                width: 100%;
+                padding: 0;
+                margin: 10rem auto;
+            }
+            .reserve-heading{
+                font-size: 1.5rem;
+                padding: 0;
+            }
+
+            .reserve{
+                padding: 1rem;
+                justify-content: space-between;
+                margin-bottom: 0;
+            }
+            .reserve-hr{
+                width: 100%;
+                margin-top: 1px;
+            }
+        }
+
+        @media screen and (max-width: 460px) {
+            .logo h1{
+                font-size: 2rem;
+            }
+            .top-image-container{
+                width: 35vh;
+                height: 25vh;
+            }
+
+            .hero-main{
+                margin: 0 auto;
+                padding: 4rem 1rem;
+            }
+
+            .hero{
+                width: 100%;
+                /* padding: 1.5rem; */
+                margin: 1rem auto 1rem auto;
+            }
+
+            
+        }
+
+        @media screen and (max-width: 380px) {
+            .top-image-container{
+                width: 30vh;
+                height: 35vh;
+            }
+            .reserve-section{
+                width: 100%;
+                padding: 0;
+            }
+            .reserve-heading{
+                font-size: 1.5rem;
+                padding: 0;
+            }
+
+            .reserve{
+                /* align-items: center; */
+                padding: 1rem;
+                width: 80%;
+                justify-content: space-between;
+                margin-bottom: 0;
+            }
+            .reserve-hr{
+                width: 90%;
+            }
+
+            .hero-main{
+                font-size: 2.5rem;
+            }
+
+            .hero{
+                font-size: 1.5rem;
+            }
+
+            .info p{
+                font-size: 14px;
+            }
+
+
+            .menu-section{
+                width: 90%;
+                margin: 0 auto;
+                padding: 0;
+            }
+            .menu-image{
+                width: 55vw;
+                /* padding: 0; */
+            }
+            
+        }
+
+        /* ------------------------------------- */
+
+
+
+
+    /* This is for animation background for the gradient */
+
+    @keyframes gradient {
+        0% {
+            background-position: 0% 50%;
+        }
+        50% {
+            background-position: 100% 50%;
+        }
+        100% {
+            background-position: 0% 50%;
+        }
+    }
+
+    /* ------------------------------------------------------ */
+    
